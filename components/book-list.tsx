@@ -1,9 +1,19 @@
-export const BookList = () => {
+import { BookCard } from "./book-card";
+
+interface Props {
+	title: string;
+	books: Book[];
+	containerClassName?: string;
+}
+export const BookList = ({ title, books, containerClassName }: Props) => {
 	return (
-		<section>
-			<h2 className="font-bebas-neue text-4xl text-light-100">
-				Populart books
-			</h2>
+		<section className={containerClassName}>
+			<h2 className="font-bebas-neue text-4xl text-light-100">{title}</h2>
+			<ul className="book-list">
+				{books.map((book) => (
+					<BookCard key={book.id} {...book} />
+				))}
+			</ul>
 		</section>
 	);
 };
