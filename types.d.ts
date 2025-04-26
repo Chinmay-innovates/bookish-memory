@@ -21,3 +21,11 @@ interface Book {
 	/** Whether the book is currently loaned by the user */
 	isLoanedBook?: boolean; // optional
 }
+
+interface AuthCredentials {
+	fullName: string;
+	email: string;
+	password: string;
+	universityId: number;
+	universityCard: string;
+}

@@ -89,10 +89,10 @@ export const ImageUpload = ({
 					height={20}
 					className="object-contain"
 				/>
-				<p className="text-base text-light-100">
+				<div className="text-base text-light-100">
 					Upload a file
-					{file && <p className="upload-filename">{file.filePath}</p>}
-				</p>
+					{file && <span className="upload-filename">{file.filePath}</span>}
+				</div>
 			</button>
 			{file && (
 				<IKImage

@@ -2,9 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "~/lib/utils";
+import { cn, getInitials } from "~/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Session } from "next-auth";
 
-export const Header = () => {
+export const Header = ({ session }: { session: Session }) => {
 	const pathname = usePathname();
 	return (
 		<header className="my-10 flex justify-between gap-5">
@@ -27,6 +29,16 @@ export const Header = () => {
 						)}
 					>
 						Library
+					</Link>
+				</li>
+				<li>
+					<Link href={"/my-profile"}>
+						<Avatar>
+							<AvatarImage src={session.user?.image || ""} />
+							<AvatarFallback className="bg-amber-100 font-semibold">
+								{getInitials(session.user?.name || "IN")}
+							</AvatarFallback>
+						</Avatar>
 					</Link>
 				</li>
 			</ul>
