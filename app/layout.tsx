@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import { cn } from "~/lib/utils";
+import { Toaster } from "~/components/ui/toaster";
 
 import "./globals.css";
 
@@ -36,6 +37,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
 				className={cn("antialiased", ibmPlexSans.className, bebasNeue.variable)}
 			>
 				{children}
+				<Toaster />
 			</body>
 		</html>
 	);
