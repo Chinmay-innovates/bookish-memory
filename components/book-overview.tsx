@@ -19,7 +19,7 @@ export const BookOverview = ({
 	return (
 		<section className="book-overview">
 			<div className="flex flex-1 flex-col gap-5">
-				<h1>Book Title</h1>
+				<h1>{title}</h1>
 				<div className="book-info">
 					<p>
 						By <span className="font-semibold text-light-200">{author}</span>

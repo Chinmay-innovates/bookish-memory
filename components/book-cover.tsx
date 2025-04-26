@@ -45,6 +45,8 @@ export const BookCover = ({
 					fill
 					src={coverImage}
 					alt="Book Cover"
+					priority={variant === "wide"}
+					sizes="(max-width: 768px) 100vw, 50vw"
 					className="object-fill rounded-tr-lg rounded-br-lg"
 				/>
 			</div>
