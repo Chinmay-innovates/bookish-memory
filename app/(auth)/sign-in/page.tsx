@@ -1,7 +1,7 @@
 "use client";
 import { AuthForm } from "~/components/auth-form";
 import { signInWithCredentials } from "~/lib/actions/auth";
-import { signInSchema } from "~/lib/schemas";
+import { signInSchema } from "~/lib/validation";
 const Page = () => {
 	return (
 		<AuthForm
