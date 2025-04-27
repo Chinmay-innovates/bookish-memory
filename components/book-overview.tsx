@@ -3,7 +3,6 @@ import { Button } from "./ui/button";
 import { BookCover } from "./book-cover";
 
 export const BookOverview = ({
-	id,
 	title,
 	author,
 	genre,
@@ -13,8 +12,6 @@ export const BookOverview = ({
 	description,
 	coverColor,
 	coverUrl,
-	videoUrl,
-	summary,
 }: Book) => {
 	return (
 		<section className="book-overview">
